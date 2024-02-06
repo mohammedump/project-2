@@ -1,6 +1,25 @@
 <?php
 session_start();
+// les cookies
+// Vérifier si le formulaire a été soumis
+if (isset($_POST['submit'])) {
+    // Récupérer les valeurs du formulaire
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
+    // Stocker l'email dans la session
+    $_SESSION['email'] = $email;
+
+    // Vérifier si la case "se souvenir de moi" est cochée
+    if (isset($_POST['check'])) {
+        // Définir les cookies pour l'email et le mot de passe avec une durée de vie d'un an
+        setcookie('email', $email, time() + 365*24*3600, '/');
+        setcookie('password', $password, time() + 365*24*3600, '/');
+    }
+}
+
+// Rediriger vers une autre page après traitement
+header('Location: ../front/clients/profil.php');
 function hash_password($password) {
     // Generate a random salt
     $options = [

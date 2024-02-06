@@ -19,14 +19,14 @@
         <form action="../../tretment/connexion.php" method="post" style="display: block;">
             <div class="mb-3">
                 <label for="email" class="form-label">Email
-                    <input type="email" name="email" id="email" value="" class="form-control" placeholder="Login" >
+                    <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($_COOKIE['email']); ?>" class="form-control" placeholder="Login" >
                 </label>
                 <?php if (!empty($_SESSION['emailErr'])) { echo $_SESSION['emailErr']; } ?>
             </div>
 
             <div class="mb-3">
                 <label for="pswd" class="form-label">Mot de passe
-                    <input type="password" name="password" value="" id="pswwordd" class="form-control" placeholder="Password" >
+                    <input type="password" name="password" value="<?php echo htmlspecialchars($_COOKIE['password']); ?>" id="pswwordd" class="form-control" placeholder="Password" >
                 </label>
                 <?php if (!empty($_SESSION['passwordErr'])) { echo $_SESSION['passwordErr']; } ?>
             </div>

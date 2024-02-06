@@ -11,7 +11,7 @@ $currentPageFolder = dirname($currentPage);
 
 
 
-if ($currentPage === '/p-pfe/front/service/service.php') {
+if ($currentPage === '/project-2/front/service/service.php') {
 
 }else{
     include 'nav.php';
@@ -29,14 +29,14 @@ if ($currentPage === '/p-pfe/front/service/service.php') {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-            <a class="nav-link <?php if($currentPage == 'home') echo 'active'; ?>" href="/p-pfe/front/index.php">Home</a>
+            <a class="nav-link <?php if($currentPage == 'home') echo 'active'; ?>" href="/project-2/front/index.php">Home</a>
 
               <a class="nav-link" href="#About">About</a>
-              <a class="nav-link" href="/p-pfe/front/clients/service.php">Services </a>
+              <a class="nav-link" href="/project-2/front/clients/service.php">Services </a>
               <?php if(!empty($_SESSION['email'])){echo' <a class="nav-link" href="profil.php">profile</a>'; } ?>
               
-              <a href="/p-pfe/front/authentification/login.php" class="btn btn-brand ms-lg-3">Connection</a>
-              <a href="/p-pfe/front/registration.php" class="btn btn-brand ms-lg-3">Inscription</a>
+              <a href="/project-2/front/authentification/login.php" class="btn btn-brand ms-lg-3">Connection</a>
+              <a href="/project-2/front/registration.php" class="btn btn-brand ms-lg-3">Inscription</a>
             </div>
           </div>
         </div>

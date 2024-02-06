@@ -12,7 +12,7 @@
                 </p>
                 <?php
                 $currentPage = $_SERVER['PHP_SELF'];
-                $expectedPath = '/p-pfe/front/index.php';
+                $expectedPath = '/project-2/front/index.php';
 
                 if ($currentPage === $expectedPath) {
 
@@ -32,7 +32,7 @@
             <?php
             if (isset($_SESSION["nom"])) {
                 echo '<div class="col-auto">
-                    <a href="/p-pfe/front/authentification/logout.php" class="btn btn-brand ms-lg-3">Se déconnecter</a>
+                    <a href="/project-2/front/authentification/logout.php" class="btn btn-brand ms-lg-3">Se déconnecter</a>
                 </div>
                 ';
             }
